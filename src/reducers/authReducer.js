@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  isSignedIn: null,
+  isSignedIn: false,
 };
 
 const authReducer = (state = INITIAL_STATE, action) => {
