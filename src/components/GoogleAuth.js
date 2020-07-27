@@ -63,7 +63,7 @@ class GoogleAuth extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state); //we are getting auth: {isSignedIn: null}
+  // console.log(state); //we are getting auth: {isSignedIn: null} 
   return { isSignedIn: state.auth.isSignedIn };
 }
 
