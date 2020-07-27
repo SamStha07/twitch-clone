@@ -23,9 +23,9 @@ export const signOut = () => {
 };
 
 export const createStream = (formValues) => {
+  //formValues = {title, description}
   return async function (dispatch) {
-    const response = await streams.post("/streams", formValues);
-    // console.log(response);
+    const response = await streams.post("/streams", formValues); //{id, title, description}
     dispatch({
       type: CREATE_STREAM,
       payload: response.data,
@@ -70,7 +70,7 @@ export const deleteStream = (id) => {
     const response = await streams.delete(`/streams/${id}`);
     dispatch({
       type: DELETE_STREAM,
-      payload: response.data,
+      payload: id, //not action.payload
     });
   };
 };

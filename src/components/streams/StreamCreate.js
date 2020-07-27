@@ -15,7 +15,7 @@ class StreamCreate extends Component {
   }
 
   renderInput = (formProps) => {
-    console.log(formProps);
+    // console.log(formProps);
     const { input, label, meta } = formProps;
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
@@ -28,7 +28,7 @@ class StreamCreate extends Component {
   };
 
   onSubmit = (formValues) => {
-    // console.log(formValues);
+    // console.log(formValues); {title, descrition}
     this.props.createStream(formValues);
   };
 
