@@ -10,7 +10,7 @@ class StreamEdit extends Component {
   render() {
     // console.log(this.props);
     // console.log(props.match.params.id);
-    // console.log(this.props.stream);
+    console.log(this.props.stream);
     const { stream } = this.props;
     //if we don't us if statement, it will throw error like cannot read property
     if (!stream) {
