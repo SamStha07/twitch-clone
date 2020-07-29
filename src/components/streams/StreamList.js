@@ -18,7 +18,12 @@ class StreamList extends Component {
           <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
             Edit
           </Link>
-          <Link to={`/streams/delete/${stream.id}`} className="ui button negative">Delete</Link>
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className="ui button negative"
+          >
+            Delete
+          </Link>
         </div>
       );
     }
@@ -43,7 +48,10 @@ class StreamList extends Component {
         <div>{this.renderEditAndDelete(stream)}</div>
         <i className="large middle aligned icon camera" />
         <div className="content">
-          {stream.title}
+          <Link to={`/streams/${stream.id}`} className="header">
+            {stream.title}
+          </Link>
+
           <div className="description">{stream.description}</div>
         </div>
       </div>
