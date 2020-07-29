@@ -36,7 +36,7 @@ export const createStream = (formValues) => {
     });
     //Do some programmatic navigation to
     //get the user back to the root route
-    history.push('/');
+    history.push("/");
   };
 };
 
@@ -64,11 +64,12 @@ export const fetchStream = (id) => {
 
 export const editStream = (id, formValues) => {
   return async function (dispatch) {
-    const response = await streams.put(`/streams/${id}`, formValues);
+    const response = await streams.patch(`/streams/${id}`, formValues);
     dispatch({
       type: EDIT_STREAM,
       payload: response.data,
     });
+    history.push("/");
   };
 };
 
